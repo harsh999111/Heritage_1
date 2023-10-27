@@ -1,0 +1,38 @@
+.fieldset {
+    border: 1px solid black;
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .input {
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input1 {
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .input:focus {
+    border: none;
+  }
+  .input1:focus {
+    border: none;
+  }
+
+  .input::placeholder {
+    color: rgb(179, 179, 31);
+    text-align: right;
+    margin-right: 150px;
+  }
+
+  .input1::placeholder {
+    color: rgb(179, 179, 31);
+    text-align: right;
+    margin-right: 130px;
+  }
+  
