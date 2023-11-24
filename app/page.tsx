@@ -7,7 +7,7 @@ export default function Home() {
     <div className=''>
       <div className='flex justify-end'>
         <Link href="/Login" className='text-yellow-600'>
-          Next>>
+          Next&gt;&gt;
         </Link>
       </div>
       <div className="flex justify-center mt-8 md:mt-[-20px] lg:mt-8 ">
