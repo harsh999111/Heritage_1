@@ -2,6 +2,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
 import './input.css'; // Import the CSS file
+import Link from "next/link";
 const Layer1Image = "/Images/Layer_1.png";
 const ObjectsImage = "/Images/OBJECTS.png";
 
@@ -31,14 +32,14 @@ const Login: React.FC = () => {
 
   return (
     <section>
-      <div className="flex justify-center">
-        <Image src={Layer1Image} alt="Layer 1" width={100} height={100} className="mt-7" />
+      <div className="flex justify-center ">
+        <Image src={Layer1Image} alt="Layer 1" width={130} height={130} className="mt-[100px] sm:mt-20 sm:w-40 sm:h-40 xl:w-52 xl:h-52 2xl:w-48 2xl:h-48 2xl:mt-8" />
       </div>
       <div>
-        <div className="text-yellow-600 font-Inter flex justify-center font-bold text-xl mt-2">
+        <div className="text-yellow-600 font-Inter flex justify-center font-bold text-xl  mt-14 sm:mt-20 md:mt-16 lg:mt-8 xl:text-3xl xl:mt-20 2xl:mt-16">
           LOGIN NOW
         </div>
-        <p className="text-green-600 flex justify-center text-xs">
+        <p className="text-green-600 flex justify-center text-xs xl:text-lg">
           Please enter email and password.
         </p>
       </div>
@@ -47,7 +48,7 @@ const Login: React.FC = () => {
 
         <div>
           <fieldset className="fieldset rounded-lg">
-            <legend className="text-yellow-700 font-bold ml-5">Email</legend>
+            <legend className="text-yellow-700 font-bold ml-5 lg:text-xl">Email</legend>
             <input
               type="email"
               id="email"
@@ -75,7 +76,7 @@ const Login: React.FC = () => {
 
         <div>
           <fieldset className="fieldset rounded-lg">
-            <legend className="text-yellow-700 font-bold ml-5">Password</legend>
+            <legend className="text-yellow-700 font-bold ml-5 lg:text-xl">Password</legend>
             <input
               type="password"
               name="password"
@@ -101,15 +102,16 @@ const Login: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-6">
-          <button type="submit"  disabled={isSubmitting || !isValid}  className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait">
+          <Link href={"/Register"} className="bg-yellow-800 w-72 h-9 rounded-xl">Hey</Link>
+          {/* <button type="submit"  disabled={isSubmitting || !isValid}  className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait">
             Login
-          </button>
+          </button> */}
         </div>
       </form>
       <div className="createaccount"></div>
       <div className="google"></div>
-      <div className="Img1 mt-7 flex justify-center">
-        <Image src={ObjectsImage} alt="Objects" width={350} height={100} />
+      <div className="Img1 mt-64 flex justify-center sm:mt-[100px] md:mt-[111px] lg:mt-[100px] xl:mt-40 2xl:mt-0">
+        <Image src={ObjectsImage} alt="Objects" width={350} height={100} className="sm:w-[800px] sm:h-60 lg:w-[1050px] lg:h-[275px] xl:w-[1300px] xl:h-[390px] 2xl:h-[430px] 2xl:w-[1720px]"/>
       </div>
     </section>
   );

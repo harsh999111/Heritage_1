@@ -16,7 +16,7 @@ export default function Home() {
       <span className='font-Montaga flex justify-center mt-4 text-2xl text-yellow-800 md:text-4xl md:mt-2 lg:text-5xl'>
         The Heritage
       </span>
-      <div className='mt-12'>
+      <div className='mt-96 sm:mt-96 lg:mt-[330px] 2xl:mt-96'>
         <Scroll />
       </div>
     </div>

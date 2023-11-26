@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layer1Image from "../../public/Images/Layer_1.png";
 import ObjectsImage from "../../public/Images/OBJECTS.png";
 import "./Register.css";
+import Link from "next/link";
 
 type Inputs = {
   example: string;
@@ -165,14 +166,15 @@ const Register: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-6">
-          <button
+          <Link href={"/Bording"} className="bg-yellow-800 w-72 h-9 rounded-xl">Register</Link>
+          {/* <button
             type="submit"
             value="Register"
             disabled={isSubmitting || !isValid}
             className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait"
           >
             Register
-          </button>
+          </button> */}
         </div>
       </form>
 
