@@ -16,7 +16,7 @@ const Boarding = () => {
         </p>
         <div className="main-1 pt-32 pb-24 sm:pt-14 md:pt-20 md:pb-20  lg:pt-14 lg:pb-10 2xl:px-24 2xl:pt-2 2xl:pb-5" >
           <div className="">
-            <Image src={Board_1} className="2xl:h-[360px]" />
+            <Image src={Board_1}   alt="Board_1" className="2xl:h-[360px]" />
           </div>
           <div
             className="img-2"
@@ -25,7 +25,7 @@ const Boarding = () => {
                 "linear-gradient(180deg, #B6E8D9 1.81%, rgba(182, 232, 217, 0.00) 33.68%)",
             }}
           >
-            <Image src={Board_2} className="2xl:h-[300px]" />
+            <Image src={Board_2} alt="Board_2" className="2xl:h-[300px]" />
           </div>
         </div>
         <div className="main-2">

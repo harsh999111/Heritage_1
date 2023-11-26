@@ -11,10 +11,10 @@ const Boarding = () => {
         <p className='pt-10 text-center text-2xl text-red-400 sm:pt-6 md:pt-4 lg:text-4xl lg:pt-4  xl:pt-6 ' style={{ fontFamily: 'Gabriela' }}>Taj Mahal </p>
         <div className="main-1 pt-24 pb-18 sm:pt-1 sm:pb-0  md:pt-0 md:pb-0 lg:px-16 xl:px-[40px]  xl:pt-5">
           <div className="2xl:flex 2xl:justify-center">
-            <Image src={Taj} className='md:h-96 lg:h-[320px] lg:w-[900px] xl:h-[450px]  xl:w-[1300px] 2xl:h-[400px] 2xl:w-[1100px]' />
+            <Image src={Taj} alt='Taj' className='md:h-96 lg:h-[320px] lg:w-[900px] xl:h-[450px]  xl:w-[1300px] 2xl:h-[400px] 2xl:w-[1100px]' />
           </div>
           <div className="2xl:flex 2xl:justify-center"   style={{ background: 'linear-gradient(180deg, #B6E8D9 1.81%, rgba(182, 232, 217, 0.00) 33.68%)' }}>
-            <Image src={Taj1}  className='lg:h-[320px] lg:w-[900px] xl:h-[400px] xl:w-[1300px] 2xl:h-[250px] 2xl:w-[1100px]'/>
+            <Image src={Taj1}  alt='Taj1' className='lg:h-[320px] lg:w-[900px] xl:h-[400px] xl:w-[1300px] 2xl:h-[250px] 2xl:w-[1100px]'/>
           </div>
         </div>
         <div className="main-2">
