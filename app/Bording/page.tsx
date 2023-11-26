@@ -7,7 +7,7 @@ import './Boarding.css';
 
 const Boarding = () => {
   return (
-    <div className="bg-yellow-100 h-full w-full mr-0 p-0 pb-8 sm:pb-10 md:pb-14 lg:pb-2 2xl:pb-8 ">
+    <div className="bg-yellow-100 h-full w-full mr-0 p-0 pb-8 sm:pb-10 md:pb-14 lg:pb-2 2xl:pb-8 overflow-hidden max-w-md">
       <div className="main-boarding">
         <p
           className="pt-2 text-center text-2xl text-red-400 lg:text-4xl "
@@ -15,8 +15,8 @@ const Boarding = () => {
         >
           Red Fort{" "}
         </p>
-        <div className="main-1 pt-20 pb-20 sm:pt-14 md:pt-20 md:pb-20  lg:pt-14 lg:pb-10 2xl:px-24 2xl:pt-2 2xl:pb-5" >
-          <div className="">
+        <div className="main-1   pt-20 pb-20 sm:pt-14 md:pt-20 md:pb-20  lg:pt-14 lg:pb-10 2xl:px-24 2xl:pt-2 2xl:pb-5" >
+          <div className=" px-0">
             <Image src={Board_1}   alt="Board_1" className="2xl:h-[360px]" />
           </div>
           <div
