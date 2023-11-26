@@ -20,7 +20,7 @@ const Boarding = () => {
         </div>
         <div className="main-2">
           <p style={{ fontFamily: 'Gabriela' }} className='px-2  pl-4 pt-8 text-2xl sm:text-center sm:pt-3 md:pt-0 lg:text-4xl lg:pt-3 xl:text-5xl '>Get Started</p>
-          <p style={{ fontFamily: 'Gabriela' }} className='text-lg pl-4 pt-5 px-2 md:pt-2 lg:text-xl lg:px-10 xl:text-3xl 2xl:px-14'>Let's Get Started! Now that you've learned a little more about us, let's get started on your journey through cultural heritage.</p>
+          <p style={{ fontFamily: 'Gabriela' }} className='text-lg pl-4 pt-5 px-2 md:pt-2 lg:text-xl lg:px-10 xl:text-3xl 2xl:px-14'>Let Get Started! Now that youve learned a little more about us, let get started on your journey through cultural heritage.</p>
         </div>
         <div className="btn pt-[135px] sm:pt-6 md:pt-2 lg:pt-5  lg:px-6 xl:text-2xl xl:pt-9 2xl:pt-12 2xl:px-8">
           <Link href="/Bording1" className='relative -right-4 '>&lt;&lt; Previous</Link>
