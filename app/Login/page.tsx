@@ -43,7 +43,8 @@ const Login: React.FC = () => {
           Please enter email and password.
         </p>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}> */}
+        <form>
         <div className="flex justify-center">
 
         <div>

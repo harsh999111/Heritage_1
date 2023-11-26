@@ -33,7 +33,8 @@ const Register: React.FC = () => {
 
   return (
     <section>
-      <form noValidate onSubmit={handleSubmit(onSubmit)}>
+      <form>
+      {/* <form noValidate onSubmit={handleSubmit(onSubmit)}> */}
         <div className="flex justify-center">
           <Image
             src={Layer1Image}
