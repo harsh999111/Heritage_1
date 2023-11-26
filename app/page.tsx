@@ -4,8 +4,8 @@ import Scroll from '../public/Components/Scroll/Scroll';
 
 export default function Home() {
   return (
-    <div className=''>
-      <div className='flex justify-end'>
+    <div className="bg-[#ececec]">
+      <div className='flex justify-end '>
         <Link href="/Login" className='text-yellow-600'>
           Next&gt;&gt;
         </Link>
@@ -19,6 +19,7 @@ export default function Home() {
       <div className='mt-96 sm:mt-96 lg:mt-[330px] 2xl:mt-96'>
         <Scroll />
       </div>
+   
     </div>
   );
 }

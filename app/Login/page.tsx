@@ -31,7 +31,7 @@ const Login: React.FC = () => {
   // };
 
   return (
-    <section>
+    <section className="bg-[#ececec]">
       <div className="flex justify-center ">
         <Image src={Layer1Image} alt="Layer 1" width={130} height={130} className="mt-[100px] sm:mt-20 sm:w-40 sm:h-40 xl:w-52 xl:h-52 2xl:w-48 2xl:h-48 2xl:mt-8" />
       </div>

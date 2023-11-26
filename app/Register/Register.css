@@ -2,6 +2,9 @@
     border: 1px solid black;
     width: 300px; /* Adjust the width as needed */
   }
+  body{
+    background-color: #ececec;
+  }
   
   .input {
     border: none;

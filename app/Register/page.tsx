@@ -32,7 +32,7 @@ const Register: React.FC = () => {
   // };
 
   return (
-    <section>
+    <section className="bg-[#ececec]">
       <form>
       {/* <form noValidate onSubmit={handleSubmit(onSubmit)}> */}
         <div className="flex justify-center">
