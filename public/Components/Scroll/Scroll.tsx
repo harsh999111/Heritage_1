@@ -13,7 +13,7 @@ const Scroll = () => {
   return (
     <div className="scroll-container">
       <div className="logos">
-        <marquee className="logos-slide" behavior="scroll" direction="left" scrollamount="13">
+        {/* <marquee className="logos-slide" behavior="scroll" direction="left" scrollamount="13">
           <div className="flex ">
             {logos.map((logo, index) => (
               <Image
@@ -26,7 +26,7 @@ const Scroll = () => {
               />
             ))}
           </div>
-        </marquee>
+        </marquee> */}
       </div>
     </div>
   );
