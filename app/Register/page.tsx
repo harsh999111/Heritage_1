@@ -63,19 +63,19 @@ const Register: React.FC = () => {
                 placeholder="Enter Your Name"
                 className="input bg-[#ECECEC] mb-1 text-yellow-700"
                 autoComplete="text"
-                {...register("text", {
-                  required: {
-                    value: true,
-                    message: "name is required",
-                  },
-                })}
+                // {...register("text", {
+                //   required: {
+                //     value: true,
+                //     message: "name is required",
+                //   },
+                // })}
               />
             </fieldset>
-            <div>
+            {/* <div>
               {errors.text && (
                 <span className="text-amber-700">{errors.text.message}</span>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex justify-center">
@@ -89,18 +89,18 @@ const Register: React.FC = () => {
                 pattern=".+@gmail\.com"
                 className="input bg-[#ECECEC] mb-1 text-yellow-700"
                 autoComplete="email"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "email is required",
-                  },
-                })}
+                // {...register("email", {
+                //   required: {
+                //     value: true,
+                //     message: "email is required",
+                //   },
+                // })}
               />
             </fieldset>
             <div>
-              {errors.email && (
+              {/* {errors.email && (
                 <span className="text-amber-700">{errors.email.message}</span>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -118,20 +118,20 @@ const Register: React.FC = () => {
                 pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$"
                 className="input1 bg-[#ECECEC] mb-1 text-yellow-700"
                 autoComplete="new-password"
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "password is required",
-                  },
-                })}
+                // {...register("password", {
+                //   required: {
+                //     value: true,
+                //     message: "password is required",
+                //   },
+                // })}
               />
             </fieldset>
             <div>
-              {errors.password && (
+              {/* {errors.password && (
                 <span className="text-amber-700">
                   {errors.password.message}
                 </span>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -149,19 +149,19 @@ const Register: React.FC = () => {
                 pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$"
                 className="input1 bg-[#ECECEC] mb-1 text-yellow-700"
                 autoComplete="new-password"
-                {...register("confirmPassword", {
-                  required: true,
-                  validate: (value) =>
-                    value === watch("password") || "Passwords do not match",
-                })}
+                // {...register("confirmPassword", {
+                //   required: true,
+                //   validate: (value) =>
+                //     value === watch("password") || "Passwords do not match",
+                // })}
               />
             </fieldset>
             <div>
-              {errors.confirmPassword && (
+              {/* {errors.confirmPassword && (
                 <span className="text-amber-700">
                   {errors.confirmPassword.message}
                 </span>
-              )}
+              )} */}
             </div>
           </div>
         </div>
