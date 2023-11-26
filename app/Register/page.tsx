@@ -167,22 +167,22 @@ const Register: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-6">
-          <Link href={"/Bording"} className="bg-yellow-800 w-72 h-9 rounded-xl">Register</Link>
-          <button
+          <Link href={"/Bording"} className="bg-yellow-800 w-72 h-9 rounded-xl text-center text-white">Register</Link>
+          {/* <button
             type="submit"
             value="Register"
             disabled={isSubmitting || !isValid}
             className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait"
           >
             Register
-          </button>
+          </button> */}
         </div>
       </form>
 
       <div className="createaccount"></div>
       <div className="google"></div>
-      <div className="Img1 mt-7 flex justify-center">
-        <Image src={ObjectsImage} alt="Objects" width={350} height={100} />
+      <div className="Img1 mt-10 flex justify-center">
+        <Image src={ObjectsImage} alt="Objects" width={400} height={120} />
       </div>
     </section>
   );

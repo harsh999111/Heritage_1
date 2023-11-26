@@ -10,7 +10,7 @@ const Boarding = () => {
     <div className="bg-yellow-100 h-full w-full mr-0 p-0 pb-8 sm:pb-10 md:pb-14 lg:pb-2 2xl:pb-8 ">
       <div className="main-boarding">
         <p
-          className="pt-0 text-center text-2xl text-red-400 lg:text-4xl "
+          className="pt-2 text-center text-2xl text-red-400 lg:text-4xl "
           style={{ fontFamily: "Gabriela" }}
         >
           Red Fort{" "}
@@ -44,8 +44,8 @@ const Boarding = () => {
             cultural heritage of different regions around India.
           </p>
         </div>
-        <div className="pt-14 sm:pt-32 md:pt-[70px] lg:pt-6 xl:pt-28 2xl:pt-5">
-          <Link href="/Bording1" className=" relative -right-[260px] sm:-right-[550px] md:-right-[670px] lg:-right-[950px] xl:-right-[1190px] xl:text-2xl 2xl:-right-[1550px] ">Next &gt;&gt;</Link>
+        <div className="pt-14 px-12 sm:pt-32 md:pt-[70px] lg:pt-6 xl:pt-28 2xl:pt-5">
+          <Link href="/Bording1" className=" relative -right-[250px] sm:-right-[550px] md:-right-[670px] lg:-right-[950px] xl:-right-[1190px] xl:text-2xl 2xl:-right-[1550px] ">Next &gt;&gt;</Link>
         </div>
       </div>
     </div>
