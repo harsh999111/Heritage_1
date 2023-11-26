@@ -24,11 +24,11 @@ const Login: React.FC = () => {
     mode: "onBlur",
   });
 
-  const onSubmit= async(data) => {
-    await wait(3000);
-    console.log(data);
+  // const onSubmit= async(data) => {
+  //   await wait(3000);
+  //   console.log(data);
     
-  };
+  // };
 
   return (
     <section>
