@@ -80,7 +80,7 @@ const Login: React.FC = () => {
             <legend className="text-yellow-700 font-bold ml-5 lg:text-xl">Password</legend>
             <input
               type="password"
-              name="password"
+              // name="password"
               id="password"
               placeholder="Enter Your Password"
               pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$"
