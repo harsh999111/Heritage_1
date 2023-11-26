@@ -181,7 +181,7 @@ const Register: React.FC = () => {
 
       <div className="createaccount"></div>
       <div className="google"></div>
-      <div className="Img1 mt-10 flex justify-center">
+      <div className="Img1 mt-12 flex justify-center">
         <Image src={ObjectsImage} alt="Objects" width={400} height={120} />
       </div>
     </section>

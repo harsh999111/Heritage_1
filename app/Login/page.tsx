@@ -112,7 +112,7 @@ const Login: React.FC = () => {
       </form>
       <div className="createaccount"></div>
       <div className="google"></div>
-      <div className="Img1 mt-7 flex justify-center sm:mt-[100px] md:mt-[111px] lg:mt-[100px] xl:mt-40 2xl:mt-0">
+      <div className="Img1 mt-10 flex justify-center sm:mt-[100px] md:mt-[111px] lg:mt-[100px] xl:mt-40 2xl:mt-0">
         <Image src={ObjectsImage} alt="Objects" width={400} height={270} className="sm:w-[800px] sm:h-60 lg:w-[1050px] lg:h-[275px] xl:w-[1300px] xl:h-[390px] 2xl:h-[430px] 2xl:w-[1720px]"/>
       </div>
     </section>
