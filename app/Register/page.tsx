@@ -167,14 +167,14 @@ const Register: React.FC = () => {
 
         <div className="flex justify-center mt-6">
           <Link href={"/Bording"} className="bg-yellow-800 w-72 h-9 rounded-xl">Register</Link>
-          {/* <button
+          <button
             type="submit"
             value="Register"
             disabled={isSubmitting || !isValid}
             className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait"
           >
             Register
-          </button> */}
+          </button>
         </div>
       </form>
 

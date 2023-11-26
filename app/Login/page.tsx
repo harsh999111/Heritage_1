@@ -103,9 +103,9 @@ const Login: React.FC = () => {
 
         <div className="flex justify-center mt-6">
           <Link href={"/Register"} className="bg-yellow-800 w-72 h-9 rounded-xl">Hey</Link>
-          {/* <button type="submit"  disabled={isSubmitting || !isValid}  className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait">
+          <button type="submit"  disabled={isSubmitting || !isValid}  className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait">
             Login
-          </button> */}
+          </button>
         </div>
       </form>
       <div className="createaccount"></div>
