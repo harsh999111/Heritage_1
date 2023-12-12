@@ -2,8 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
-import Input from '../../public/Components/Input';
+// import Input from '../../public/Components/Input';
 import Heritage from '../../public/Images/Layer_1.png';
+import Link from 'next/link';
 
 const wait = (t: number) => new Promise((resolve) => setTimeout(resolve, t));
 
@@ -17,16 +18,16 @@ const Login = () => {
     mode: 'onBlur',
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     await wait(2000);
-    console.log(data);
+    // console.log(data);
   };
 
   return (
     <div>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <Image src={Heritage} className="mx-auto h-13 w-auto" />
+          <Image src={Heritage} alt="Heritage" className="mx-auto h-13 w-auto" />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
@@ -56,7 +57,7 @@ const Login = () => {
                     },
                   })}
                 />
-                {errors.email && <span className="text-red-400 text-sm">{errors.email.message}</span>}
+                {errors.email && errors.email.type == "required" && <p className='text-red-400'>Please Enter email</p>}
               </div>
             </div>
 
@@ -89,9 +90,7 @@ const Login = () => {
                     },
                   })}
                 />
-                {errors.password && (
-                  <span className="text-red-400 text-sm">{errors.password.message}</span>
-                )}
+                   {errors.password && errors.password.type == "required" && <p className='text-red-400'>Please Enter Password</p>}
               </div>
             </div>
 
@@ -121,6 +120,7 @@ const Login = () => {
               Welcome Heritage
             </a>
           </p>
+          <Link href="/Register">Go to Register</Link>
         </div>
       </div>
     </div>

@@ -10,9 +10,9 @@ const Login = () => {
   const { register, handleSubmit, getValues, formState: { errors,isLoading,isValid,isSubmitting } } = useForm({
     mode:"onBlur",
   });
-  const onSubmit =async (data) => {
+  const onSubmit =async () => {
     await wait (2000);
-    console.log(data);
+    // console.log(data);
   }
   console.log(errors);
   
@@ -20,7 +20,7 @@ const Login = () => {
     <div>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-4 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <Image src={Heritage} className="mx-auto h-auto w-auto"/>
+          <Image src={Heritage} alt="Heritage" className="mx-auto h-auto w-auto"/>
           <h2 className="mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign Up to your account
           </h2>
@@ -47,7 +47,7 @@ const Login = () => {
                   })
                   }
                 />
-                {errors.email && <span className='text-red-400 text-sm'>{errors.email.message}</span>}
+                 {errors.name && errors.name.type == "required" && <p className='text-red-400'>Please Enter Name</p>}
               </div>
             </div>
 {/* <-----  email ----------> */}
@@ -75,7 +75,7 @@ const Login = () => {
 
                   }
                 />
-                {errors.email && <span className='text-red-400 text-sm'>{errors.email.message}</span>}
+                  {errors.email && errors.email.type == "required" && <p className='text-red-400'>Please Enter email</p>}
               </div>
             </div>
 
@@ -107,9 +107,7 @@ const Login = () => {
                     }
                   })}
                 />
-                {errors.password && (
-                  <span className='text-red-400 text-sm'>{errors.password.message}</span>
-                )}
+                  {errors.password && errors.password.type == "required" && <p className='text-red-400'>Please Enter Password</p>}
               </div>
             </div>
 
@@ -137,9 +135,7 @@ const Login = () => {
                     },
                   })}
                 />
-                {errors.confirmPassword && (
-                  <span className='text-red-400 text-sm'>{errors.confirmPassword.message}</span>
-                )}
+                   {errors.confirmPassword && errors.confirmPassword.type == "required" && <p className='text-red-400'>Please Enter confirmPassword</p>}
               </div>
             </div>
 

@@ -25,7 +25,7 @@ const Scroll = () => {
               <Image
                 src={logo.src}
                 alt={logo.alt}
-                className={logo.className}
+                // className={logo.className}
                 width={250} // Set the width as needed
                 height={280} // Set the height as needed
               />
