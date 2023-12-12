@@ -1,191 +1,162 @@
-"use client";
-import { useForm, SubmitHandler } from "react-hook-form";
-import Image from "next/image";
-import Layer1Image from "../../public/Images/Layer_1.png";
-import ObjectsImage from "../../public/Images/OBJECTS.png";
-import "./Register.css";
-import Link from "next/link";
+"use client"
+import React from 'react'
+import Image from 'next/image'
+import { useForm } from "react-hook-form";
+import Heritage from "../../public/Images/Layer_1.png"
 
-type Inputs = {
-  example: string;
-  exampleRequired: string;
-};
+const wait = (t:number) => new Promise((resolve)=> setTimeout(resolve,t))
 
-const wait = (t: number) => {
-  return new Promise((resolve) => setTimeout(resolve, t));
-};
-
-const Register: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors, isSubmitting, isValid },
-  } = useForm<Inputs>({
-    mode: "onBlur",
+const Login = () => {
+  const { register, handleSubmit, getValues, formState: { errors,isLoading,isValid,isSubmitting } } = useForm({
+    mode:"onBlur",
   });
-
-  // const onSubmit= async(data) => {
-  //   await wait(3000);
-  //   console.log(data);
-    
-  // };
-
+  const onSubmit =async (data) => {
+    await wait (2000);
+    console.log(data);
+  }
+  console.log(errors);
+  
   return (
-    <section className="bg-[#ececec]">
-      <form>
-      {/* <form noValidate onSubmit={handleSubmit(onSubmit)}> */}
-        <div className="flex justify-center">
-          <Image
-            src={Layer1Image}
-            alt="Layer 1"
-            width={100}
-            height={100}
-            className="mt-7"
-          />
+    <div>
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-4 lg:px-8">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <Image src={Heritage} className="mx-auto h-auto w-auto"/>
+          <h2 className="mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+            Sign Up to your account
+          </h2>
         </div>
-        <div>
-          <div className="text-yellow-600 font-Inter flex justify-center font-bold text-xl mt-2">
-            Create Account
-          </div>
-          <p className="text-green-600 flex justify-center text-xs">
-            Let us know about yourself.
-          </p>
-        </div>
-        
-        <div className="flex justify-center mt-6">
+
+        <div className="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form className="space-y-1" noValidate onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <fieldset className="fieldset rounded-lg ">
-              <legend className="text-yellow-700 font-bold ml-5">Name</legend>
-              <input
-                type="text"
-                id="text"
-                placeholder="Enter Your Name"
-                className="input bg-[#ECECEC] mb-1 text-yellow-700"
-                autoComplete="text"
-                // {...register("text", {
-                //   required: {
-                //     value: true,
-                //     message: "name is required",
-                //   },
-                // })}
-              />
-            </fieldset>
-            {/* <div>
-              {errors.text && (
-                <span className="text-amber-700">{errors.text.message}</span>
-              )}
-            </div> */}
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div>
-            <fieldset className="fieldset rounded-lg">
-              <legend className="text-yellow-700 font-bold ml-5">Email</legend>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter Your Gmail "
-                pattern=".+@gmail\.com"
-                className="input bg-[#ECECEC] mb-1 text-yellow-700"
-                autoComplete="email"
-                // {...register("email", {
-                //   required: {
-                //     value: true,
-                //     message: "email is required",
-                //   },
-                // })}
-              />
-            </fieldset>
-            <div>
-              {/* {errors.email && (
-                <span className="text-amber-700">{errors.email.message}</span>
-              )} */}
+              <label htmlFor="Name" className="block text-sm font-medium leading-6 text-gray-900">
+                Name
+              </label>
+              <div className="mt-2">
+                <input
+                  id="name"
+                  type="name"
+                  autoComplete="name"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6"
+                  {...register("name",{
+                    required:{
+                      value:true,
+                      message:"Name is Required"
+                    }
+                  })
+                  }
+                />
+                {errors.email && <span className='text-red-400 text-sm'>{errors.email.message}</span>}
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center">
-          <div>
-            <fieldset className="fieldset rounded-lg">
-              <legend className="text-yellow-700 font-bold ml-5">
-                Password
-              </legend>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter Your Password"
-                pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$"
-                className="input1 bg-[#ECECEC] mb-1 text-yellow-700"
-                autoComplete="new-password"
-                // {...register("password", {
-                //   required: {
-                //     value: true,
-                //     message: "password is required",
-                //   },
-                // })}
-              />
-            </fieldset>
+{/* <-----  email ----------> */}
             <div>
-              {/* {errors.password && (
-                <span className="text-amber-700">
-                  {errors.password.message}
-                </span>
-              )} */}
-            </div>
-          </div>
-        </div>
+              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                Email address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6"
+                  {...register("email",{
+                    required:{
+                      value:true,
+                      message:"Email is Required"
+                    },
+                    pattern:{
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message:"Please Provid Valid Email Addresh "
+                    }
+                  })
 
-        <div className="flex justify-center">
-          <div>
-            <fieldset className="fieldset rounded-lg">
-              <legend className="text-yellow-700 font-bold ml-5">
-                Confirm Password
-              </legend>
-              <input
-                type="password"
-                id="confirmPassword"
-                placeholder="Confirm Your Password"
-                pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$"
-                className="input1 bg-[#ECECEC] mb-1 text-yellow-700"
-                autoComplete="new-password"
-                // {...register("confirmPassword", {
-                //   required: true,
-                //   validate: (value) =>
-                //     value === watch("password") || "Passwords do not match",
-                // })}
-              />
-            </fieldset>
+                  }
+                />
+                {errors.email && <span className='text-red-400 text-sm'>{errors.email.message}</span>}
+              </div>
+            </div>
+
             <div>
-              {/* {errors.confirmPassword && (
-                <span className="text-amber-700">
-                  {errors.confirmPassword.message}
-                </span>
-              )} */}
+              <div className="flex items-center justify-between">
+                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                  Password
+                </label>
+              </div>
+              <div className="mt-2">
+                <input
+                  id="password"
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6"
+                  {...register("password",{
+                    required:{
+                      value:true,
+                      message:"Password Is Required"
+                    },
+                    pattern:{
+                      value: /^[a-zA-Z0-9!@#$%^&*]{6,16}$/,
+                      message:"Please Provid Valid Password "
+                    },
+                    minLength:{
+                      value: 6,
+                      message:"Password should be 6 Character"
+                    }
+                  })}
+                />
+                {errors.password && (
+                  <span className='text-red-400 text-sm'>{errors.password.message}</span>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div className="flex justify-center mt-6">
-          <Link href={"/Bording"} className="bg-yellow-800 w-72 h-9 rounded-xl text-center text-white">Register</Link>
-          {/* <button
-            type="submit"
-            value="Register"
-            disabled={isSubmitting || !isValid}
-            className="bg-yellow-800 w-72 h-9 rounded-xl disabled:bg-yellow-600 disabled:cursor-wait"
-          >
-            Register
-          </button> */}
-        </div>
-      </form>
+            <div>
+              <div className="flex items-center justify-between">
+                <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-gray-900">
+                  Confirm Password
+                </label>
+              </div>
+              <div className="mt-2">
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  autoComplete="new-password"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-500 sm:text-sm sm:leading-6"
+                  {...register("confirmPassword", {
+                    required: {
+                      value: true,
+                      message: "Password Is Required",
+                    },
+                    validate: (value) => {
+                      const { password } = getValues();
+                      return value === password || "Passwords should match";
+                    },
+                  })}
+                />
+                {errors.confirmPassword && (
+                  <span className='text-red-400 text-sm'>{errors.confirmPassword.message}</span>
+                )}
+              </div>
+            </div>
 
-      <div className="createaccount"></div>
-      <div className="google"></div>
-      <div className="Img1 mt-16  flex justify-center">
-        <Image src={ObjectsImage} alt="Objects" width={400} height={130} />
+            <div>
+              <button
+                type="submit"
+                disabled={isSubmitting || !isValid}
+                className="flex  mt-4 w-full justify-center rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 disabled:bg-yellow-200 disabled:cursor-wait"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  )
+}
 
-export default Register;
+export default Login

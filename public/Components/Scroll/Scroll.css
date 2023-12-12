@@ -1,8 +1,27 @@
-  .logos-slide img {
-    width: 200px; /* Adjust the logo width */
-    height: auto;
-    margin-right: 20px; /* Adjust the margin between logos */
+/* Add this to your styles or CSS file */
+
+.scroll-container {
+  overflow: hidden;
+}
+
+.logos {
+  display: flex;
+  animation: scroll 10s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
- 
-  
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Adjust the width and height of the .logos-slide container as needed */
+.logos-slide {
+  width: 500%; /* Number of logos * 100% */
+  display: flex;
+  gap: 1rem; /* Adjust the gap between logos as needed */
+}

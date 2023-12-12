@@ -1,32 +1,37 @@
 import React from 'react';
 import Image from 'next/image';
+import './Scroll.css'
+import Tajmhal from '../../Images/tajmahal.png';
+import hawamahal from '../../Images/hawa-mahal.png';
+import jultaminara from '../../Images/jhulta-minar.png';
+import gateway from '../../Images/gateway-of-india.png';
+import hawamhel from '../../Images/hawa-mahal.png';
 
 const logos = [
-  { src: '/images/tajmahal.png', alt: 'Taj Mahal', className: 'mt-16' },
-  { src: '/images/hawa-mahal.png', alt: 'Hawa Mahal' },
-  { src: '/images/jhulta-minar.png', alt: 'Jhulta Minar' },
-  { src: '/images/india-gate.png', alt: 'India Gate' },
-  { src: '/images/gateway-of-india.png', alt: 'Gateway of India' }
+  { src: Tajmhal, alt: 'Taj Mahal' },
+  { src: hawamahal, alt: 'Hawa Mahal' },
+  { src: jultaminara, alt: 'Jhulta Minar' },
+  { src: gateway, alt: 'Gateway of India' },
+  { src: hawamhel, alt: 'Hawa Mahal' },
 ];
 
 const Scroll = () => {
   return (
     <div className="scroll-container">
       <div className="logos">
-        {/* <marquee className="logos-slide" behavior="scroll" direction="left" scrollamount="13">
-          <div className="flex ">
-            {logos.map((logo, index) => (
+        <div className="logos-slide">
+          {logos.map((logo, index) => (
+            <div key={index} className="logo-item">
               <Image
-                key={index}
                 src={logo.src}
                 alt={logo.alt}
                 className={logo.className}
-                width={150}  // Set the width as needed
-                height={180}  // Set the height as needed
+                width={250} // Set the width as needed
+                height={280} // Set the height as needed
               />
-            ))}
-          </div>
-        </marquee> */}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
